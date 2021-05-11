@@ -1,14 +1,14 @@
-import {foodFactService, SearchType} from '../services/food-fact.service';
+import {foodFactService, SearchType} from '../../services/food-fact.service';
 import {Component, OnInit} from '@angular/core';
-import {Product} from "../Model/product.interface";
+import {Product} from "../../Model/product.interface";
 import {ModalController} from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-food-facts',
+  templateUrl: './food-facts.page.html',
+  styleUrls: ['./food-facts.page.scss'],
 })
-export class Tab1Page implements OnInit {
+export class FoodFactsPage implements OnInit {
   products: Product[];
   originalProducts: Product[];
   nutrigradeSelected: string[] = [];
