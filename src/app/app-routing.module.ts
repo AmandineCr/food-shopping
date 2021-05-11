@@ -4,11 +4,11 @@ import {FoodFactsDetailsPage} from "./pages/food-facts-details/food-facts-detail
 import {TabsPage} from './tabs/tabs.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'food-facts',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'food-facts',
+  //   pathMatch: 'full',
+  // },
   {
     path: 'food-facts',
     loadChildren: () => import('./pages/food-facts/food-facts.module').then(m => m.FoodFactsPageModule)

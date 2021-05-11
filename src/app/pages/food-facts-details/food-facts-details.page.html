@@ -17,22 +17,26 @@
       </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content text-center>
-      <img [src]="product.image_url" class="info-img ">
-
+<!--      <ion-item lines="none">-->
+<!--        <ion-icon name="" slot="start"></ion-icon>-->
+        <img [src]="product.image_url" class="info-img">
+<!--      </ion-item>-->
+      <br>
       <ion-item lines="none">
-        <ion-icon name="star-half" slot="paper"></ion-icon>
+<!--        <ion-icon name="" slot="start"></ion-icon>-->
 <!--        <ion-label>{{ product.ingredients_text }}</ion-label>-->
-        {{ product.ingredients_text }}
+        Ingredients : {{ product.ingredients_text }}
+      </ion-item>
+      <br>
+      <ion-item lines="none">
+<!--        Nutriscore <ion-label text-wrap>{{ product.nutriscore_grade | uppercase }}</ion-label>-->
+        <ion-icon name="nutrition-outline" slot="start"></ion-icon>
+        <img height="50" [src]="'https://static.openfoodfacts.org/images/attributes/nutriscore-'+product.nutriscore_grade+'.svg'" *ngIf="'https://static.openfoodfacts.org/images/attributes/nutriscore-'+product.nutriscore_grade+'.svg' != 'N/A'" [alt]="'https://static.openfoodfacts.org/images/attributes/nutriscore-'+product.nutriscore_grade+'.svg'">
       </ion-item>
 
       <ion-item lines="none">
-        <ion-icon name="nutrition" slot="start"></ion-icon>
-        <ion-label text-wrap>{{ product.nutriscore_grade }}</ion-label>
-      </ion-item>
-
-      <ion-item lines="none">
-        <ion-icon name="speedometer" slot="start"></ion-icon>
         <ion-label text-wrap>{{ product.quantity }}</ion-label>
+        <ion-icon name="barbell-outline" slot="start"></ion-icon>
       </ion-item>
 
     </ion-card-content>
